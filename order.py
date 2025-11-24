@@ -22,10 +22,11 @@ another_order = input("Do you want to add another item? (yes/no) ")
 if another_order == "yes":
     item_2 = input("Enter the name of second item = ")
     if item_2 in menu:
-        order_total += menu[item_2]
+        order_total += menu[item_2]+menu[item_1]
         print(f"Item {item_2} has been added to order")
     else:
         print(f"Ordered item {item_2} is not available!")
 
 # Display total amount
+
 print(f"The total amount of items to pay is {order_total}")
